@@ -1,6 +1,7 @@
 <?php
 
-namespace Iamolayemi\Paystack\Endpoints;
+namespace ChrisKusi\PaystackCustom\Endpoints;
+
 
 class TransferRecipient extends Endpoint
 {

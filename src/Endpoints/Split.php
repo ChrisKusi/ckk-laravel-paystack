@@ -1,6 +1,6 @@
 <?php
 
-namespace Iamolayemi\Paystack\Endpoints;
+namespace ChrisKusi\PaystackCustom\Endpoints;
 
 class Split extends Endpoint
 {

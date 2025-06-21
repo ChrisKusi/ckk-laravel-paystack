@@ -1,6 +1,6 @@
 <?php
 
-namespace Iamolayemi\Paystack\Endpoints;
+namespace ChrisKusi\PaystackCustom\Endpoints;
 
 use Exceptions\PaystackConnectionException;
 use Iamolayemi\Paystack\Paystack;

@@ -1,25 +1,25 @@
 <?php
 
-namespace Iamolayemi\Paystack;
+namespace ChrisKusi\PaystackCustom;
 
-use Iamolayemi\Paystack\Endpoints\Balance;
-use Iamolayemi\Paystack\Endpoints\Bank;
-use Iamolayemi\Paystack\Endpoints\Country;
-use Iamolayemi\Paystack\Endpoints\Customer;
-use Iamolayemi\Paystack\Endpoints\DedicatedAccount;
-use Iamolayemi\Paystack\Endpoints\Invoice;
-use Iamolayemi\Paystack\Endpoints\Page;
-use Iamolayemi\Paystack\Endpoints\Plan;
-use Iamolayemi\Paystack\Endpoints\Product;
-use Iamolayemi\Paystack\Endpoints\Refund;
-use Iamolayemi\Paystack\Endpoints\Resolve;
-use Iamolayemi\Paystack\Endpoints\Settlement;
-use Iamolayemi\Paystack\Endpoints\Split;
-use Iamolayemi\Paystack\Endpoints\SubAccount;
-use Iamolayemi\Paystack\Endpoints\Subscription;
-use Iamolayemi\Paystack\Endpoints\Transaction;
-use Iamolayemi\Paystack\Endpoints\Transfer;
-use Iamolayemi\Paystack\Endpoints\TransferRecipient;
+use ChrisKusi\PaystackCustom\Endpoints\Balance;
+use ChrisKusi\PaystackCustom\Endpoints\Bank;
+use ChrisKusi\PaystackCustom\Endpoints\Country;
+use ChrisKusi\PaystackCustom\Endpoints\Customer;
+use ChrisKusi\PaystackCustom\Endpoints\DedicatedAccount;
+use ChrisKusi\PaystackCustom\Endpoints\Invoice;
+use ChrisKusi\PaystackCustom\Endpoints\Page;
+use ChrisKusi\PaystackCustom\Endpoints\Plan;
+use ChrisKusi\PaystackCustom\Endpoints\Product;
+use ChrisKusi\PaystackCustom\Endpoints\Refund;
+use ChrisKusi\PaystackCustom\Endpoints\Resolve;
+use ChrisKusi\PaystackCustom\Endpoints\Settlement;
+use ChrisKusi\PaystackCustom\Endpoints\Split;
+use ChrisKusi\PaystackCustom\Endpoints\SubAccount;
+use ChrisKusi\PaystackCustom\Endpoints\Subscription;
+use ChrisKusi\PaystackCustom\Endpoints\Transaction;
+use ChrisKusi\PaystackCustom\Endpoints\Transfer;
+use ChrisKusi\PaystackCustom\Endpoints\TransferRecipient;
 use Illuminate\Http\Client\PendingRequest;
 use Illuminate\Support\Facades\Http;
 

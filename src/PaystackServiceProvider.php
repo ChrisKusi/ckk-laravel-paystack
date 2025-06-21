@@ -1,6 +1,6 @@
 <?php
 
-namespace Iamolayemi\Paystack;
+namespace ChrisKusi\PaystackCustom;
 
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\ServiceProvider;

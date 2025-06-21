@@ -1,18 +1,24 @@
 {
-    "name": "iamolayemi/laravel-paystack",
-    "description": "A laravel package for working with paystack api",
+    "name": "chriskusi/ckk-laravel-paystack",
+    "description": "A customized Laravel package for working with Paystack API, tailored for Laravel 12 and PHP 8.3",
     "keywords": [
         "paystack",
-        "laravel"
+        "laravel",
+        "custom"
     ],
-    "homepage": "https://github.com/iamolayemi/laravel-paystack",
+    "homepage": "https://github.com/ChrisKusi/ckk-laravel-paystack",
     "license": "MIT",
     "type": "library",
     "authors": [
         {
+            "name": "Christian Kusi",
+            "email": "kusichris656@gmail.com",
+            "role": "Developer"
+        },
+        {
             "name": "Olayemi Olatayo",
             "email": "olatayo.olayemi.peter@gmail.com",
-            "role": "Developer"
+            "role": "Original Developer"
         }
     ],
     "scripts": {
@@ -22,14 +28,14 @@
         "format": "vendor/bin/pint"
     },
     "require": {
-        "php": "^8.1|^8.2",
+        "php": "^8.1|^8.2|^8.3",
         "guzzlehttp/guzzle": "^7.3",
-        "illuminate/support": "^9.0|^10.0"
+        "illuminate/support": "^9.0|^10.0|^12.0"
     },
     "require-dev": {
         "laravel/pint": "^1.10",
-        "nunomaduro/collision": "6.0|^7.0",
-        "orchestra/testbench": "^7.0|^8.0",
+        "nunomaduro/collision": "^6.0|^7.0|^8.0",
+        "orchestra/testbench": "^7.0|^8.0|^9.0",
         "phpunit/phpunit": "^9.0|^10.0"
     },
     "autoload": {
@@ -37,12 +43,12 @@
             "src/Helpers.php"
         ],
         "psr-4": {
-            "Iamolayemi\\Paystack\\": "src"
+            "ChrisKusi\\PaystackCustom\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Iamolayemi\\Paystack\\Tests\\": "tests"
+            "ChrisKusi\\PaystackCustom\\Tests\\": "tests"
         }
     },
     "config": {
@@ -51,11 +57,13 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Iamolayemi\\Paystack\\PaystackServiceProvider"
+                "ChrisKusi\\PaystackCustom\\PaystackServiceProvider"
             ],
             "aliases": {
-                "Paystack": "Iamolayemi\\Paystack\\Facades\\Paystack"
+                "Paystack": "ChrisKusi\\PaystackCustom\\Facades\\Paystack"
             }
         }
-    }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }

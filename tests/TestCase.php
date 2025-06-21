@@ -1,9 +1,9 @@
 <?php
 
-namespace Iamolayemi\Paystack\Tests;
+namespace ChrisKusi\PaystackCustom\Tests;
 
-use Iamolayemi\Paystack\Facades\Paystack;
-use Iamolayemi\Paystack\PaystackServiceProvider;
+use ChrisKusi\PaystackCustom\Facades\Paystack;
+use ChrisKusi\PaystackCustom\PaystackServiceProvider;
 
 class TestCase extends \Orchestra\Testbench\TestCase
 {

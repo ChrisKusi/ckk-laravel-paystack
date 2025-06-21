@@ -1,13 +1,12 @@
 <?php
 
-namespace Iamolayemi\Paystack\Tests\Feature;
+namespace ChrisKusi\PaystackCustom\Tests\Feature;
 
-class ExampleTest extends \Iamolayemi\Paystack\Tests\TestCase
+class ExampleTest extends \ChrisKusi\PaystackCustom\Tests\TestCase
 {
     /** @test */
     public function it_assert_true()
     {
         $this->assertTrue(true);
-
     }
 }

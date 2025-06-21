@@ -1,9 +1,10 @@
 <?php
 
-namespace Iamolayemi\Paystack\Tests\Unit;
+namespace ChrisKusi\PaystackCustom\Tests\Unit;
 
-use Iamolayemi\Paystack\Facades\Paystack;
-use Iamolayemi\Paystack\Tests\TestCase;
+use ChrisKusi\PaystackCustom\Facades\Paystack;
+use ChrisKusi\PaystackCustom\Tests\TestCase;
+
 
 class PaystackTest extends TestCase
 {
