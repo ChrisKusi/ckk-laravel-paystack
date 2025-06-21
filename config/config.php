@@ -3,7 +3,7 @@
 /*
  * This file is part of the Laravel Paystack package.
  *
- * (c) Olayemi Olatayo <olatayo.olayemi.peter@gmail.com>
+ * (c) Christian Kusi <kusichris656@gmail.com>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
