@@ -1,8 +1,8 @@
-# Quickstart tutorial
+# Quickstart Tutorial
 
-This tutorial focuses on getting you started with this package quickly. We recommend following this tutorial just to get things working so that you can play with the package.
+This tutorial focuses on getting you started with the `ckk-laravel-paystack` package quickly. We recommend following this tutorial just to get things working so that you can play with the package.
 
-Make sure you've already installed this package in your project. You can check out our [Installation Guide](/installation) on how to install laravel paystack on your project.
+Make sure you've already installed this package in your project. You can check out our [Installation Guide](/installation) on how to install `ckk-laravel-paystack` on your project.
 
 In this tutorial, we will be implementing a simple payment gateway using this package.
 
@@ -15,14 +15,14 @@ Let's get started by setting up all the necessary route endpoints.
 Route::post('/paystack/initialize', [PaymentController::class, 'initialize'])
     ->name('pay');
 
-// The callback url after a payment
+// The callback URL after a payment
 Route::get('/paystack/callback', [PaymentController::class, 'callback'])
     ->name('callback');
 ```
 
 ## Setup Views
 
-In this section, Let's set up our views to collect payment information.
+In this section, let's set up our views to collect payment information.
 
 ```html
 <h3>Make Payment: N1500.00</h3>
@@ -40,8 +40,7 @@ In this section, Let's set up our views to collect payment information.
 
 ## Setup Controller
 
-Now, we will need to create a controller to handle your application requests. We can create the file
-app/Controllers/PaymentController.php like this:
+Now, we will need to create a controller to handle your application requests. We can create the file `app/Http/Controllers/PaymentController.php` like this:
 
 ```php
 <?php
@@ -49,12 +48,12 @@ app/Controllers/PaymentController.php like this:
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Iamolayemi\Paystack\Facades\Paystack;
+use ChrisKusi\PaystackCustom\Facades\Paystack;
 
 class PaymentController extends Controller
 {
     /**
-     * Initialize a new paystack payment
+     * Initialize a new Paystack payment
      *
      * @return void
      */
@@ -63,42 +62,45 @@ class PaymentController extends Controller
         // Generate a unique payment reference
         $reference = Paystack::generateReference();
 
-        // prepare payment details from form request
+        // Prepare payment details from form request
         $paymentDetails = [
             'email' => request('email'),
             'amount' => request('amount'),
             'reference' => $reference,
-            'callback_url' =>  route('callback')
+            'callback_url' => route('callback')
         ];
 
-        // initialize new payment and get the response from the api call.
+        // Initialize new payment and get the response from the API call
         $response = Paystack::transaction()
             ->initialize($paymentDetails)->response();
 
         if (!$response['status']) {
-            // notify that something went wrong
+            // Notify that something went wrong
+            return redirect()->back()->with('error', 'Payment initialization failed.');
         }
 
-        // redirect to authorization url
+        // Redirect to authorization URL
         return redirect($response['data']['authorization_url']);
     }
 
-
     public function callback()
     {
-        // get reference  from request
+        // Get reference from request
         $reference = request('reference') ?? request('trxref');
 
-        // verify payment details
+        // Verify payment details
         $payment = Paystack::transaction()->verify($reference)->response('data');
 
-        // check payment status
+        // Check payment status
         if ($payment['status'] == 'success') {
-            // payment is successful
-            // code your business logic here
+            // Payment is successful
+            // Code your business logic here
+            return redirect()->back()->with('success', 'Payment successful!');
         } else {
-            // payment is not successful
+            // Payment is not successful
+            return redirect()->back()->with('error', 'Payment failed.');
         }
     }
 }
 ```
+
