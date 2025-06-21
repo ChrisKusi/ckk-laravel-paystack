@@ -1,13 +1,13 @@
 {
-  "name": "laravel-paystack",
+  "name": "ckk-laravel-paystack-docs",
   "version": "0.0.1",
-  "description": "This package provides an expressive and convenient way to interact with the Paystack API within your Laravel Application.",
+  "description": "Documentation for the ckk-laravel-paystack package, providing an expressive way to interact with the Paystack API within Laravel 12 and PHP 8.3 applications.",
   "main": "index.js",
   "authors": {
-    "name": "Olayemi Olatayo",
-    "email": "olatayo.olayemi.peter@gmail.com"
+    "name": "Christian Kusi",
+    "email": "kusichris656@gmail.com"
   },
-  "repository": "https://github.com/iamolayemi/laravel-paystack",
+  "repository": "https://github.com/ChrisKusi/ckk-laravel-paystack",
   "scripts": {
     "dev": "vuepress dev src",
     "build": "vuepress build src"
